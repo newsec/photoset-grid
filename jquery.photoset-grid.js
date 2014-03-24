@@ -140,11 +140,6 @@
           }
 
           var $cells = $(elem).find('.photoset-cell');
-          var $cols1 = $(elem).find('.cols-1 .photoset-cell');
-          var $cols2 = $(elem).find('.cols-2 .photoset-cell');
-          var $cols3 = $(elem).find('.cols-3 .photoset-cell');
-          var $cols4 = $(elem).find('.cols-4 .photoset-cell');
-          var $cols5 = $(elem).find('.cols-5 .photoset-cell');
 
           // Apply styles initial structure styles to the grid
           $(elem).css({
@@ -169,11 +164,11 @@
           });
 
           // Set the width of the cells based on the number of columns in the row
-          $cols1.css({ 'width': '100%' });
-          $cols2.css({ 'width': '50%' });
-          $cols3.css({ 'width': '33.3%' });
-          $cols4.css({ 'width': '25%' });
-          $cols5.css({ 'width': '20%' });
+          $rows.each(function() {
+            var cellsNum = $(this).find('.photoset-cell').length,
+                cellsWidth = Math.floor((100 / cellsNum)*100)/100;
+            $(this).find('.photoset-cell').css({ 'width': cellsWidth + '%' });
+          });
 
 
           var gutterVal = parseInt(options.gutter, 10);
