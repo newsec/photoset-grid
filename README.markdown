@@ -1,6 +1,9 @@
-# Photoset Grid
+# A 'photosetGrid' fork
 
 A simple jQuery plugin to arrange images into a flexible grid, based on Tumblr's photoset feature. Originally the plugin was created for our [Style Hatch](http://stylehatch.co) Tumblr themes as a way to use the photoset grid in responsive layouts, but we have since expanded it for use outside of the themes.
+## Differences
+
+- Allow you to use more than 5 images in photo set grid.
 
 ## Demo
 
